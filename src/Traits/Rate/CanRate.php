@@ -18,7 +18,6 @@ trait CanRate
         if ($value === null || $value === false || $value === -1) {
             return $this->unRate($model);
         }
-
         return LaravelRatingFacade::rate($this, $model, $value, $testimonial, LaravelRating::TYPE_RATE);
     }
 
